@@ -8,61 +8,46 @@
     <link rel="stylesheet" href="./assets/style/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+
     <title>Document</title>
 </head>
 <body>
     <h2>Weather Dashboard</h2>
-    <div class="row container" id="dashboard">
-         
-
-        <div class="col-3" id="buttons">
-       
-            <h4>Search for a City:</h4>
-
-            <form class="formInput" id="formInput">
-                <span class ="textBox" id="textBox">
-                Placehold
-                </span>
-                <button class ="searchBtn" id="searchBtn">
-                Search
-                </button>
-            </form>
-
-            <div class="searchHistory">
-            <button class="col-12"></button>
-            <button class="col-12"></button>
-            <button class="col-12"></button>
-            <button class="col-12"></button>
-            <button class="col-12"></button>
-            <button class="col-12"></button>
-            <button class="col-12"></button>
-            <button class="col-12"></button>
-            
-            </div>
-        </div>
-
-        <div class="col-9">
-            <div class="container-fluid" id="currentDay">
-                current day details placehold            
-            </div>
-    
-            <div class="container" id="fiveDay">
-    
-                <h4>
-                    5-day Forecast:
-                </h4>
-    
-                <div class="row">
-                <div class="col-2" id="daily1">box</div>
-                <div class="col-2" id="daily2">box</div>
-                <div class="col-2" id="daily3">box</div>
-                <div class="col-2" id="daily4">box</div>
-                <div class="col-2" id="daily5">box</div>
-                </div>
-    
-        </div>
+    <div id="header" class="jumbotron jumbotron-fluid text-container">
+        <h1 id="header-text" class="display-2"></h1>
+        <div id="artist-credit"></div>
     </div>
 
+    <!-- Main container for webpage content -->
+    <div id="content" class="container">
+        <div class="row">
+
+            <!-- Left side content with city search box and appended cities -->
+            <div id="content-left" class="col-md-3">
+                <form>
+                    <label for="search-city">Search for a City:</label>
+                    <div class="form-row">
+                        <input id="search-city" class="form-control" name="city" value=""></input>
+
+                        <button id="search-button" class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <div id="search-error"></div>
+                <!-- list of prior searched cities -->
+                <ul id="city-results" class="list-group mt-4"></ul>
+ 
+            </div>
+
+            <!-- Right side content showing current weather and five day forecast displays on search -->
+            <div id="content-right" class="col-md-9 pt-4">
+                <!-- Current weather displayed on top -->
+                <div id="current-weather" class="border rounded"></div>
+                <!-- Five day forecast below the current weather -->
+                <div id="fiveDayForecast" class="mt-5"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/script/script.js"></script>
