@@ -7,6 +7,12 @@ The purpose of this weather dashboard is to build a product using 3rd part APIs 
 * JQuey, Open weather APIs
 
 ## Website
+https://coryslsbry.github.io/WeatherDash/
+
+## Git Repo
+https://github.com/CorySlsbry/WeatherDash
+
+## Screenshot
 
 
 ## Contribution
